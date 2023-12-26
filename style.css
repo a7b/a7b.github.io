@@ -139,7 +139,7 @@ span.highlight {
 }
 
 .menu {
-  background-color;
+    /*background-color; */ 
 }
 
 .menu a {
@@ -150,4 +150,22 @@ span.highlight {
 
 .menubutton{
   background-color: black;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  align-content: center;
+  justify-content: center;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  /*vertical-align: middle;*/
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
 }

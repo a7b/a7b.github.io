@@ -48,15 +48,34 @@ MathJax = {
                   <p style="text-align:center">
                   <button class="menubutton"><a href="index.html">home</a></button> &nbsp;
                   / 
-                  &nbsp;<button class="menubutton"><a href="cooking.html">cooking</a></button>&nbsp;
+                  &nbsp;<button class="menubutton"><a href="funthings.html">fun things</a></button>&nbsp;
                   /
-                  &nbsp;<button class="menubutton"><a href="other.html">other</a></button>
+                  &nbsp;<button class="menubutton"><a href="misc.html">misc</a></button>
                   </p>  
                 </div> 
             </tr>
           </tbody></table>
-            
           </tbody></table>
+
+          <table>
+          <h2>Papers</h2>
+          <div class="grid">
+            
+          </div>
+          <script>
+            var grid = document.querySelector('.grid');
+            var images = ['spinpast.jpg', 'alla chitarra.jpg', 'brusc.jpg', 
+              'cake.jpg', 'mussel.jpg', 'scampi.jpg', 'hotchoc.jpg', 'bibimbap.jpg', 'karaage.jpg', 'qop.jpg', 
+              'miso.jpg', 'chicken.jpg']; // replace with your image filenames
+            
+            for (var i = 0; i < images.length; i++) {
+              var img = document.createElement('img');
+              img.src = 'images/cooking/' + images[i];
+              img.alt = images[i];
+              grid.appendChild(img);
+            }
+            </script>
+          </table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0px">
