@@ -169,3 +169,39 @@ span.highlight {
   width: 100%;
   height: auto;
 }
+
+/* 
+.overlay {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .3s ease-in-out;
+}
+
+.container:hover {
+  transition: transform 0.5s ease-in-out;
+}
+
+.container:hover .overlay {
+  height: 80%;
+  opacity: 0.1;
+}
+
+.captiontext {
+  color: white;
+  font-size: 1vw;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+} */

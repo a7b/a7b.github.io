@@ -38,7 +38,9 @@ MathJax = {
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px;
+                  border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
                 <p class="name" style="text-align: center;">
@@ -48,7 +50,7 @@ MathJax = {
                   <p style="text-align:center">
                   <button class="menubutton"><a href="index.html">home</a></button> &nbsp;
                   / 
-                  &nbsp;<button class="menubutton"><a href="funthings.html">fun things</a></button>&nbsp;
+                  &nbsp;<button class="menubutton"><a href="funthings.html">pictures</a></button>&nbsp;
                   /
                   &nbsp;<button class="menubutton"><a href="misc.html">misc</a></button>
                   </p>  
@@ -57,7 +59,6 @@ MathJax = {
           </tbody></table>
           </tbody></table>
 
-          <table>
           <div class="grid">
             
           </div>
@@ -68,13 +69,31 @@ MathJax = {
               'miso.jpg', 'chicken.jpg']; // replace with your image filenames
             
             for (var i = 0; i < images.length; i++) {
+              var span = document.createElement('span');
+              span.setAttribute('title', 'Title for ' + images[i]); // replace with your titles
+
               var img = document.createElement('img');
               img.src = 'images/cooking/' + images[i];
               img.alt = images[i];
-              grid.appendChild(img);
+              
+              span.appendChild(img);
+              grid.appendChild(span);
+
+          
+              // var overlay = document.createElement('div');
+              // overlay.className = 'overlay';
+              // var captionText = document.createElement('div');
+              // captionText.className = 'captiontext';
+              // captionText.innerHTML += 'Caption for ' + images[i]; // replace with your captions
+              // overlay.appendChild(captionText);                 
+              // var container = document.createElement('div');
+              // container.className = 'container';
+              // container.appendChild(img);
+              // container.appendChild(overlay);
+            
+              //grid.appendChild(container);
             }
             </script>
-          </table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0px">
