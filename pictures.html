@@ -1,18 +1,5 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  },
-  svg: {
-    fontCache: 'global'
-  }
-};
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-</script>
   <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0VCDLJB8LP"></script>
@@ -25,7 +12,7 @@ MathJax = {
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    
-    <title>Aditya Bhardwaj - Misc</title>
+    <title>Aditya Bhardwaj - Pictures</title>
 
     <meta name="author" content="Aditya Bhardwaj">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,41 +45,24 @@ MathJax = {
             </tr>
           </tbody></table>
           </tbody></table>
+            <button id="load-image">Random Image</button>
+            <img id="image" style ="width:80%; height:auto" src="images/pictures/PXL_20230812_004237066.jpg" alt="Random Image">
 
-          <div class="grid">
-            
-          </div>
-          <script>
-            var grid = document.querySelector('.grid');
-            var images = ['spinpast.jpg', 'alla chitarra.jpg', 'brusc.jpg', 
-              'cake.jpg', 'mussel.jpg', 'scampi.jpg', 'hotchoc.jpg', 'bibimbap.jpg', 'karaage.jpg', 'qop.jpg', 
-              'miso.jpg', 'chicken.jpg']; // replace with your image filenames
-            
-            for (var i = 0; i < images.length; i++) {
-              var span = document.createElement('span');
-              span.setAttribute('title', 'Title for ' + images[i]); // replace with your titles
+            <script>
+            fetch('pictures.json')
+                .then(response => response.json())
+                .then(data => {
+                    var images = data;
+                    document.getElementById('load-image').addEventListener('click', function() {
+                    var randomIndex = Math.floor(Math.random() * images.length);
+                    var randomImage = 'images/pictures/' + images[randomIndex];
+                    document.getElementById('image').src = randomImage;
+                    });
 
-              var img = document.createElement('img');
-              img.src = 'images/cooking/' + images[i];
-              img.alt = images[i];
-              
-              span.appendChild(img);
-              grid.appendChild(span);
+                })
+                .catch(error => console.error(error));
 
-          
-              // var overlay = document.createElement('div');
-              // overlay.className = 'overlay';
-              // var captionText = document.createElement('div');
-              // captionText.className = 'captiontext';
-              // captionText.innerHTML += 'Caption for ' + images[i]; // replace with your captions
-              // overlay.appendChild(captionText);                 
-              // var container = document.createElement('div');
-              // container.className = 'container';
-              // container.appendChild(img);
-              // container.appendChild(overlay);
-            
-              //grid.appendChild(container);
-            }
+
             </script>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
