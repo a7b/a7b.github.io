@@ -150,7 +150,11 @@ span.highlight {
 
 .menubutton{
   background-color: black;
+}
 
+.menubuttonselec{
+  color: black;
+  background-color: white;
 }
 
 .grid {
@@ -168,6 +172,18 @@ span.highlight {
 .grid img {
   width: 100%;
   height: auto;
+}
+
+.randbutton{
+  background-color: black ;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
 }
 
 /* 

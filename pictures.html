@@ -37,7 +37,7 @@
                   <p style="text-align:center">
                   <button class="menubutton"><a href="index.html">home</a></button> &nbsp;
                   / 
-                  &nbsp;<button class="menubutton"><a href="pictures.html">pictures</a></button>&nbsp;
+                  &nbsp;<button class="menubuttonselec"><a href="pictures.html" style="color: black">pictures</a></button>&nbsp;
                   /
                   &nbsp;<button class="menubutton"><a href="misc.html">misc</a></button>
                   </p>  
@@ -45,9 +45,11 @@
             </tr>
           </tbody></table>
           </tbody></table>
-            <button id="load-image">Random Image</button>
-            <img id="image" style ="width:80%; height:auto" src="images/pictures/PXL_20230812_004237066.jpg" alt="Random Image">
-
+          <div style="display: flex; flex-direction: column; align-items: center; height: 800px; justify-content: start;">
+            <button id="load-image" class="randbutton">Random Image</button>
+            &nbsp;
+            <img id="image" style="max-width:800px; max-height:700px" src="images/pictures/PXL_20230812_004237066.jpg" alt="Random Image">
+          </div>
             <script>
             fetch('pictures.json')
                 .then(response => response.json())
@@ -56,26 +58,14 @@
                     document.getElementById('load-image').addEventListener('click', function() {
                     var randomIndex = Math.floor(Math.random() * images.length);
                     var randomImage = 'images/pictures/' + images[randomIndex];
-                    document.getElementById('image').src = randomImage;
+                    var imageElement = document.getElementById('image');
+                    imageElement.src = randomImage;
+
                     });
 
                 })
                 .catch(error => console.error(error));
-
-
             </script>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:center;font-size:small;">
-                  Inspired by <a href="https://jonbarron.info/">Jon Barron</a> and <a href="https://thowell.github.io/">Taylor Howell's</a> websites.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table> 
+          
   </body>
 </html>
