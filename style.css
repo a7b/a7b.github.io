@@ -177,12 +177,12 @@ span.highlight {
 .randbutton{
   background-color: black ;
   color: white;
-  border: none;
-  padding: 5px 10px;
+  padding: 4px 8px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 17px;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  
 
 }
 
