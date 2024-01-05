@@ -115,6 +115,13 @@ h2 {
   position: relative;
 }
 
+.news{
+  margin: 0;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;	
+  font-size: 18px;
+  text-decoration: underline
+}
+
 .two {
   width: 160px;
   height: 160px;
